@@ -2,7 +2,7 @@
     "name": "yireo/magento2-loki-checkout-hyva",
     "version": "0.0.1",
     "description": "N/A",
-    "keywords": ["dev", "loki-dev"],
+    "keywords": ["loki-theme"],
     "type": "magento2-module",
     "require": {
         "magento/framework": "^103.0",
