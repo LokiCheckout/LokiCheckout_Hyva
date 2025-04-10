@@ -6,3 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.2] - 10 April 2025
+### Fixed
+- Move dep with "yireo/magento2-hyva-theme-auto-registration" to Hyva module
+
+## [0.0.1] - 10 March 2025
+- Initial release
