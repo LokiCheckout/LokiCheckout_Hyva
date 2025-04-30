@@ -9,6 +9,9 @@
         "yireo/magento2-hyva-theme-auto-registration": "^1.0",
         "yireo/magento2-loki-checkout": "~0.0 | ^1.0"
     },
+    "suggest": {
+        "yireo/magento2-loki-checkout-hyva-skinny": "Skin down your Hyva theme to optimize the checkout"
+    },
     "license": "OSL-3.0",
     "autoload": {
         "files": [
