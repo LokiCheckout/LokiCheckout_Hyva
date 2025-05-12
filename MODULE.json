@@ -1,7 +1,9 @@
 {
     "modules": [
+        "Hyva_Theme",
         "Yireo_LokiCheckout"
     ],
     "components": [],
-    "config": []
+    "config": [],
+    "tests": []
 }
