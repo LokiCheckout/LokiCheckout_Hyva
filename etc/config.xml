@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <yireo_loki_field_components>
+        <loki_field_components>
             <fields>
                 <use_required_block>0</use_required_block>
             </fields>
-        </yireo_loki_field_components>
+        </loki_field_components>
     </default>
 </config>
