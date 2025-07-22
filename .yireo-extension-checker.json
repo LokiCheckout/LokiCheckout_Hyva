@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "Hyva_Theme",
+    "yireo/magento2-hyva-theme-auto-registration"
+  ]
+}
