@@ -1,6 +1,7 @@
 {
   "ignore": [
     "Hyva_Theme",
+    "hyva-themes/magento2-theme-module",
     "yireo/magento2-hyva-theme-auto-registration"
   ]
 }
