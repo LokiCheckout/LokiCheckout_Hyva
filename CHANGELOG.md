@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 01 August 2025
+### Fixed
+- Add dep with hyva-themes/magento2-theme-module 1.2 or higher
+- Add dep with hyva-themes/magento2-theme-module or higher
+
 ## [1.0.0] - 22 July 2025
 ### Fixed
 - Rename PHP namespace from `Yireo_Loki*` to `Loki*`
