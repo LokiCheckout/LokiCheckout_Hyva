@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.4] - 26 August 2025
+### Fixed
+- 232c7fd Add GitLab CI files
+
 ## [1.0.3] - 18 August 2025
 ### Fixed
 - Lower requirements to PHP 8.1
