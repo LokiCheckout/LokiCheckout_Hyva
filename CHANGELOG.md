@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.6] - 10 October 2025
+### Fixed
+- Skip LokiCheckout_Luma in Hyva theme autoregistration
+- Move dependency with Yireo_HyvaThemeAutoRegistration from core to Hyva-module
+- Move HyvaThemeAutoRegistration from LokiCheckout_Core to LokiCheckout_Hyva
+- Update README
+
 ## [1.0.5] - 02 September 2025
 ### Fixed
 - Add CI files
