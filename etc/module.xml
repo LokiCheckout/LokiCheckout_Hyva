@@ -4,6 +4,7 @@
         <sequence>
             <module name="Hyva_Theme"/>
             <module name="LokiCheckout_Core"/>
+            <module name="Yireo_HyvaThemeAutoRegistration"/>
         </sequence>
     </module>
 </config>
