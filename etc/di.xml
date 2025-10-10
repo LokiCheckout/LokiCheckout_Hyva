@@ -16,6 +16,9 @@
                 <item name="Loki_MapComponents" xsi:type="string">Loki_MapComponents</item>
                 <item name="Loki_Components" xsi:type="string">Loki_Components</item>
             </argument>
+            <argument name="skipModules" xsi:type="array">
+                <item name="LokiCheckout_Luma" xsi:type="string">LokiCheckout_Luma</item>
+            </argument>
         </arguments>
     </type>
 </config>
