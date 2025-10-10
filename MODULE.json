@@ -34,5 +34,6 @@
     ],
     "components": [],
     "config": [],
-    "tests": []
+    "tests": [],
+    "phpcs_severity": "1"
 }
