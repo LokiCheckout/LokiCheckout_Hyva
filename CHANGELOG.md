@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.7] - 22 October 2025
+### Fixed
+- Update MODULE.json with PHPCS severity 1
+- Update MODULE.json
+
 ## [1.0.6] - 10 October 2025
 ### Fixed
 - Skip LokiCheckout_Luma in Hyva theme autoregistration
