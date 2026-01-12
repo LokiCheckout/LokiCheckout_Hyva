@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.8] - 12 January 2026
+### Fixed
+- Add support for additional composer steps everywhere
+- Include additional composer procedure for Hyva packages
+- Copy generic CI/CD files
+- Loosen restriction with Hyva
+- Copy generic CI/CD files
+- Add plan-trial keyword to composer file
+- Update composer keywords
+- Update composer keywords
+- Update composer keywords
+
 ## [1.0.7] - 22 October 2025
 ### Fixed
 - Update MODULE.json with PHPCS severity 1
