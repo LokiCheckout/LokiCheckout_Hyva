@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.9] - 12 February 2026
+### Fixed
+- Add Loki_Debugger module to Hyva theme autoregistration list
+
 ## [1.0.8] - 12 January 2026
 ### Fixed
 - Add support for additional composer steps everywhere
