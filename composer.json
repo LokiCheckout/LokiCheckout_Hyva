@@ -1,7 +1,7 @@
 {
     "name": "loki-checkout/magento2-hyva",
     "version": "1.0.9",
-    "description": "N/A",
+    "description": "Provides additional enhancements for Hyva Themes",
     "keywords": [
         "loki-checkout-plan-trial",
         "loki-checkout-category-theme",
