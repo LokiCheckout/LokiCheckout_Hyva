@@ -8,4 +8,5 @@ composer config repositories.hyva-themes/magento2-mollie-theme-bundle github htt
 composer config repositories.hyva-themes/magento2-luma-checkout github https://github.com/hyva-themes/magento2-luma-checkout.git
 composer config repositories.hyva-themes/magento2-email-module github https://github.com/hyva-themes/magento2-email-module.git
 composer config repositories.hyva-themes/magento2-theme-fallback github https://github.com/hyva-themes/magento2-theme-fallback.git
-composer config repositories.hyva-themes/magento2-order-cancellation-webapi github https://github.com/hyva-themes/magento2-order-cancellation-webapi.git
+
+composer config --global --auth --list

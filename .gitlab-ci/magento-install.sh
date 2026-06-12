@@ -35,6 +35,7 @@ if [ "${ready:-0}" -ne 1 ]; then
 fi
     
 cd /tmp/magento
+
 php -dmemory_limit=-1 bin/magento setup:install \
   --base-url="${MAGENTO_BASE_URL}" \
   --db-host="${MYSQL_HOST}" \
