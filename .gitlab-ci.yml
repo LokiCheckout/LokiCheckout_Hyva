@@ -182,8 +182,7 @@ magento-compile:
     - php -dmemory_limit=-1 bin/magento setup:di:compile
   parallel:
     matrix:
-      - MAGENTO_VERSION: ['2.4.5-p14', '2.4.7-p4', '2.4.7-p7', '2.4.8', '2.4.8-p1', '2.4.8-p2', '2.4.8-p4']
-      #- MAGENTO_VERSION: ['2.4.9-beta1']
+      - MAGENTO_VERSION: ['2.4.7-p4', '2.4.7-p7', '2.4.8', '2.4.8-p1', '2.4.8-p2', '2.4.8-p4', '2.4.9']
 
 magento-playwright:
   image: yireo/magento2installed:2.4.8-p4
