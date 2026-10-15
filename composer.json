@@ -15,6 +15,9 @@
         "yireo/magento2-hyva-theme-auto-registration": "^1.0",
         "php": ">=8.2 <8.6"
     },
+    "require-dev": {
+        "yireo/magento2-integration-test-helper": "~0.0"
+    },
     "suggest": {
         "loki-checkout/magento2-hyva-skinny": "Skin down your Hyva theme to optimize the checkout"
     },

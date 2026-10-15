@@ -13,6 +13,7 @@ class LokiCheckoutModulesTest extends TestCase
     public function testModuleIsRegisteredAsLokiCheckoutModule(): void
     {
         $lokiCheckoutModules = $this->getObjectManager()->create(LokiCheckoutModules::class);
+        $this->assertInstanceOf(LokiCheckoutModules::class, $lokiCheckoutModules);
 
         $this->assertTrue($lokiCheckoutModules->hasModule('LokiCheckout_Hyva'));
         $this->assertContains('LokiCheckout_Hyva', $lokiCheckoutModules->getModules());

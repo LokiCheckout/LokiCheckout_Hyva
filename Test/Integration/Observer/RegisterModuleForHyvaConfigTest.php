@@ -19,8 +19,10 @@ class RegisterModuleForHyvaConfigTest extends TestCase
 
     public function testDiArguments(): void
     {
-        $arguments = $this->getObjectManager()->get(ObjectManagerConfig::class)
-            ->getArguments(RegisterModuleForHyvaConfig::class);
+        $objectManagerConfig = $this->getObjectManager()->get(ObjectManagerConfig::class);
+        $this->assertInstanceOf(ObjectManagerConfig::class, $objectManagerConfig);
+        $arguments = $objectManagerConfig->getArguments(RegisterModuleForHyvaConfig::class);
+        $this->assertIsArray($arguments);
 
         $modulePrefixes = $this->getArrayArgument($arguments, 'modulePrefixes');
         foreach (['LokiCheckout_', 'Loki_FieldComponents', 'Loki_MapComponents', 'Loki_Components', 'Loki_Debugger'] as $prefix) {
@@ -45,6 +47,7 @@ class RegisterModuleForHyvaConfigTest extends TestCase
         $observer = $this->getObjectManager()->create(RegisterModuleForHyvaConfig::class, [
             'moduleNames' => ['LokiCheckout_Luma'],
         ]);
+        $this->assertInstanceOf(RegisterModuleForHyvaConfig::class, $observer);
 
         $extensions = $this->runObserver($observer);
 
@@ -63,10 +66,15 @@ class RegisterModuleForHyvaConfigTest extends TestCase
         $this->assertSame(array_unique($sources), $sources);
     }
 
+    /**
+     * @param array<int, array{src: string}> $extensions
+     * @return array<int, array{src: string}>
+     */
     private function runObserver(?RegisterModuleForHyvaConfig $observer = null, array $extensions = []): array
     {
         if (null === $observer) {
             $observer = $this->getObjectManager()->create(RegisterModuleForHyvaConfig::class);
+            $this->assertInstanceOf(RegisterModuleForHyvaConfig::class, $observer);
         }
 
         $config = new DataObject(['extensions' => $extensions]);
@@ -76,12 +84,24 @@ class RegisterModuleForHyvaConfigTest extends TestCase
         $extensions = $config->getData('extensions');
         $this->assertIsArray($extensions);
 
-        return $extensions;
+        $validExtensions = [];
+        foreach ($extensions as $extension) {
+            $this->assertIsArray($extension);
+            $this->assertArrayHasKey('src', $extension);
+            $this->assertIsString($extension['src']);
+            $validExtensions[] = ['src' => $extension['src']];
+        }
+
+        return $validExtensions;
     }
 
+    /**
+     * @param array<int, array{src: string}> $extensions
+     */
     private function assertModuleInExtensions(string $moduleName, array $extensions): void
     {
         $componentRegistrar = $this->getObjectManager()->get(ComponentRegistrar::class);
+        $this->assertInstanceOf(ComponentRegistrar::class, $componentRegistrar);
         $modulePath = (string)$componentRegistrar->getPath(ComponentRegistrar::MODULE, $moduleName);
         $this->assertNotEmpty($modulePath, 'Module "'.$moduleName.'" is not registered');
 
@@ -94,9 +114,14 @@ class RegisterModuleForHyvaConfigTest extends TestCase
         $this->fail('Module "'.$moduleName.'" not found in Hyva config: '.json_encode($extensions));
     }
 
+    /**
+     * @param array<mixed> $arguments
+     * @return array<mixed>
+     */
     private function getArrayArgument(array $arguments, string $name): array
     {
         $this->assertArrayHasKey($name, $arguments);
+        $this->assertIsArray($arguments[$name]);
         $values = [];
         foreach ($arguments[$name] as $item) {
             $values[] = is_array($item) && array_key_exists('_v_', $item) ? $item['_v_'] : $item;

@@ -70,12 +70,19 @@ class HyvaScriptsBlockTest extends AbstractLayoutTestCase
         }
     }
 
+    /**
+     * @param string[] $handles
+     */
     private function loadLayout(array $handles): LayoutInterface
     {
         $layoutLoader = $this->getObjectManager()->get(LayoutLoader::class);
+        $this->assertInstanceOf(LayoutLoader::class, $layoutLoader);
         return $layoutLoader->load($handles, [], true);
     }
 
+    /**
+     * @return string[]
+     */
     private function getChildTemplates(LayoutInterface $layout, string $parentName): array
     {
         $templates = [];

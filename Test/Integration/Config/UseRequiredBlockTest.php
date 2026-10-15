@@ -29,6 +29,9 @@ class UseRequiredBlockTest extends TestCase
 
     private function getFieldConfig(): FieldConfig
     {
-        return $this->getObjectManager()->get(FieldConfig::class);
+        $fieldConfig = $this->getObjectManager()->get(FieldConfig::class);
+        $this->assertInstanceOf(FieldConfig::class, $fieldConfig);
+
+        return $fieldConfig;
     }
 }
