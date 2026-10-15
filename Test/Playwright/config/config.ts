@@ -9,7 +9,7 @@ export type Theme = {
 
 export const themes: Theme[] = [
     {name: 'Luma', theme: 'Magento/luma', isHyva: false},
-    {name: 'Hyvä', theme: 'Loki/hyva-dev', isHyva: true},
+    {name: 'Hyvä', theme: 'Hyva/default-csp', isHyva: true},
 ];
 
 export const withTheme = (config: any, theme: Theme) => merge(config, {theme: theme.theme});

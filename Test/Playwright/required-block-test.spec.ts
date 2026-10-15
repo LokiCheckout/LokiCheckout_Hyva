@@ -12,7 +12,13 @@ const requiredFields = [
 test.describe('Required block test', () => {
     for (const theme of themes) {
         test(`should not show a required block by default (${theme.name})`, async ({page, context}) => {
-            await setupCheckout(page, context, withTheme(moduleConfig, theme));
+            const config = merge(moduleConfig, {
+                config: {
+                    'loki_field_components/fields/use_required_block': 0,
+                }
+            });
+
+            await setupCheckout(page, context, withTheme(config, theme));
 
             for (const fieldName of requiredFields) {
                 const label = new Field(page, fieldName).getLabelLocator();
