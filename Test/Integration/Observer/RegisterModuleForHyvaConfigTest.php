@@ -25,7 +25,7 @@ class RegisterModuleForHyvaConfigTest extends TestCase
         $this->assertIsArray($arguments);
 
         $modulePrefixes = $this->getArrayArgument($arguments, 'modulePrefixes');
-        foreach (['LokiCheckout_', 'Loki_FieldComponents', 'Loki_MapComponents', 'Loki_Components', 'Loki_Debugger'] as $prefix) {
+        foreach (['LokiCheckout_', 'Loki_'] as $prefix) {
             $this->assertContains($prefix, $modulePrefixes);
         }
 
@@ -37,7 +37,7 @@ class RegisterModuleForHyvaConfigTest extends TestCase
     {
         $extensions = $this->runObserver();
 
-        foreach (['LokiCheckout_Hyva', 'LokiCheckout_Core', 'Loki_FieldComponents'] as $moduleName) {
+        foreach (['LokiCheckout_Hyva', 'LokiCheckout_Core', 'Loki_FieldComponents', 'Loki_Base'] as $moduleName) {
             $this->assertModuleInExtensions($moduleName, $extensions);
         }
     }
