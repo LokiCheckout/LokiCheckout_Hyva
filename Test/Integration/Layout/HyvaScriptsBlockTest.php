@@ -59,6 +59,35 @@ class HyvaScriptsBlockTest extends AbstractLayoutTestCase
         $this->assertContains('Hyva_Theme::page/js/hyva.phtml', $headTemplates);
     }
 
+    public function testHyvaChildBlocksArePreserved(): void
+    {
+        $layout = $this->loadLayout(['checkout_index_index', 'default_hyva']);
+
+        $childBlocks = [
+            'alpine-plugin-defer' => 'script-alpine-js',
+            'alpine-defer-rules' => 'alpine-plugin-defer',
+        ];
+
+        foreach ($childBlocks as $blockName => $parentName) {
+            $this->assertNotFalse($layout->getBlock($blockName), 'Block "'.$blockName.'" was removed');
+            $this->assertSame($parentName, $layout->getParentName($blockName));
+        }
+    }
+
+    public function testHyvaHeadScriptsAreNotDuplicated(): void
+    {
+        $layout = $this->loadLayout(['checkout_index_index', 'default_hyva']);
+        $headTemplates = $this->getChildTemplates($layout, 'head.additional');
+
+        foreach (['Hyva_Theme::page/js/variables.phtml', 'Hyva_Theme::page/js/hyva.phtml'] as $template) {
+            $this->assertCount(
+                1,
+                array_keys($headTemplates, $template, true),
+                'Template "'.$template.'" is added more than once'
+            );
+        }
+    }
+
     public function testHyvaScriptsAreNotAddedWithoutHyvaHandle(): void
     {
         $layout = $this->loadLayout(['checkout_index_index']);
