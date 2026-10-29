@@ -22,3 +22,5 @@
 .playwright
 .opencode
 .gitlab-ci-local
+.playwright
+.opencode
