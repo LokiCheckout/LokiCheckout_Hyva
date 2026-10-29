@@ -12,13 +12,15 @@
         "hyva-themes/magento2-theme-module": "^1.4",
         "loki-checkout/magento2-core": "^2.0",
         "magento/framework": "^103.0",
-        "yireo/magento2-hyva-theme-auto-registration": "^1.0",
-        "php": ">=8.2 <8.6"
+        "php": ">=8.2 <8.6",
+        "yireo/magento2-hyva-theme-auto-registration": "^1.0"
     },
     "require-dev": {
         "ext-json": "*",
         "phpunit/phpunit": "^10.5",
-        "yireo/magento2-integration-test-helper": "~0.0"
+        "yireo/magento2-integration-test-helper": "~0.0",
+        "loki/magento2-functional-tests": "@dev",
+        "loki-checkout/magento2-functional-tests": "@dev"
     },
     "suggest": {
         "loki-checkout/magento2-hyva-skinny": "Skin down your Hyva theme to optimize the checkout"
