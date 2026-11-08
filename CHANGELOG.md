@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.12] - 08 November 2026
+### Fixed
+- Add NPM files
+
 ## [1.0.11] - 29 October 2026
 ### Fixed
 - Register all Loki_ modules for Hyvä theme autoregistration
