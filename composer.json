@@ -17,10 +17,10 @@
     },
     "require-dev": {
         "ext-json": "*",
-        "phpunit/phpunit": "^10.5",
-        "yireo/magento2-integration-test-helper": "~0.0",
+        "loki-checkout/magento2-functional-tests": "@dev",
         "loki/magento2-functional-tests": "@dev",
-        "loki-checkout/magento2-functional-tests": "@dev"
+        "phpunit/phpunit": "^10.5",
+        "yireo/magento2-integration-test-helper": "~0.0"
     },
     "suggest": {
         "loki-checkout/magento2-hyva-skinny": "Skin down your Hyva theme to optimize the checkout"
