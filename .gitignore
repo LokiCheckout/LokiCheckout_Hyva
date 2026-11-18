@@ -16,3 +16,4 @@
 node_modules/
 .yireo-extension-builder.json
 MEMORY.md
+.phpunit.result.cache
